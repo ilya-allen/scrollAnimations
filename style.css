@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+
+.row {
+    margin-top: 200px
+}
+
+.sam {
+    float: left;
+    width: 500px;
+    height: 500px;
+    transition: 400ms ease-in-out;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col {
+    float: left;
+    width: 50%;
+}
+
+h1 {
+    float: right;
+    margin-right: 200px;
+    font-family: 'Roboto Mono', monospace;
+    transition: 400ms ease-in-out;
+}
