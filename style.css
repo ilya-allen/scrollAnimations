@@ -31,5 +31,5 @@ h1 {
     float: right;
     margin-right: 200px;
     font-family: 'Roboto Mono', monospace;
-    transition: 400ms ease-in-out;
+    transition: 400ms linear;
 }
