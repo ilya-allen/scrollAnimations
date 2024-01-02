@@ -5,6 +5,31 @@
     scroll-behavior: smooth;
 }
 
+.header_section {
+    height: 80vh;
+}
+
+.body_section {
+    height: 80vh;
+}
+
+.down_button {
+    margin-top: 20px;
+    float: right;
+    color: rgb(160, 252, 179);
+    margin-right: 200px;
+    font-family: 'Libre Baskerville', serif;
+    transition: 400ms linear;
+    font-size: 25px;
+    display: block;
+    cursor: pointer;
+}
+
+body {
+    background-color: coral;
+    overflow: hidden;
+}
+
 .row {
     margin-top: 200px
 }
@@ -29,7 +54,11 @@
 
 h1 {
     float: right;
-    margin-right: 200px;
-    font-family: 'Roboto Mono', monospace;
+    color: antiquewhite;
+    font-family: 'Libre Baskerville', serif;
     transition: 400ms linear;
+    font-size: 50px;
+    width: 100%;
+    text-align: right;
+    padding-right: 200px;
 }
