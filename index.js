@@ -14,3 +14,41 @@ downButton.addEventListener('click', function() {
     headerText.style.transform = 'translateX(-200%)'
     image.style.transform = 'translateX(200%)'
 })
+
+const slides = document.querySelectorAll('.image');
+let curSlide = 0;
+
+slides.forEach(function(val, slideNum) {
+    val.style.transform = `translateX(${100 * (slideNum)}%)`
+})
+
+const goToSlide = function(slide) {
+    slides.forEach((s, i) => s.style.transform = `translateX(${100 * (i-slide)}%)`)
+}
+
+function nextSlide() {
+
+    console.log(curSlide)
+    if (curSlide == slides.length - 1) {
+        curSlide = -1;
+    }
+    curSlide++;
+    goToSlide(curSlide)
+}
+
+function prevSlide() {
+    if (curSlide == 0) {
+        curSlide = 3;
+    }
+    curSlide--;
+    goToSlide(curSlide)
+}
+
+
+document.addEventListener('keydown', function(e) {
+    if(e.key === 'ArrowLeft') {
+        prevSlide();
+      } else if (e.key === 'ArrowRight') {
+        nextSlide();
+      }
+})

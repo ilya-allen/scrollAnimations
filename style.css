@@ -1,8 +1,13 @@
+html {
+    overflow: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
     scroll-behavior: smooth;
+    
 }
 
 .header_section {
@@ -10,7 +15,26 @@
 }
 
 .body_section {
-    height: 80vh;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image {
+    position: absolute;
+    width: 960px;
+    height: 540px;
+    transition: 400ms ease-in-out;
+
+}
+
+.slideshow {
+    width: 960px;
+    height: 540px;
+    margin-left: 22%;
+    margin-bottom: 50px;
+    position: relative;
+    display: block;
+    overflow-x: hidden;
 }
 
 .down_button {
