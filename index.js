@@ -6,6 +6,8 @@ const headerText = document.querySelector('.header_text')
 const downButton = document.querySelector('.down_button')
 const body = document.querySelector('body')
 const bodySection = document.querySelector('.body_section')
+const leftArrow = document.querySelector('.left_arrow');
+const rightArrow = document.querySelector('.right_arrow');
 let scrollVal = 0;
 
 downButton.addEventListener('click', function() {
@@ -38,7 +40,7 @@ function nextSlide() {
 
 function prevSlide() {
     if (curSlide == 0) {
-        curSlide = 3;
+        curSlide = slides.length;
     }
     curSlide--;
     goToSlide(curSlide)
@@ -52,3 +54,7 @@ document.addEventListener('keydown', function(e) {
         nextSlide();
       }
 })
+
+rightArrow.addEventListener('click', nextSlide)
+
+leftArrow.addEventListener('click', prevSlide)
