@@ -8,6 +8,7 @@ const body = document.querySelector('body')
 const bodySection = document.querySelector('.body_section')
 const leftArrow = document.querySelector('.left_arrow');
 const rightArrow = document.querySelector('.right_arrow');
+const slidesDiv = document.querySelector('.slides_container')
 let scrollVal = 0;
 
 downButton.addEventListener('click', function() {
@@ -22,6 +23,10 @@ let curSlide = 0;
 
 slides.forEach(function(val, slideNum) {
     val.style.transform = `translateX(${100 * (slideNum)}%)`
+})
+
+slides.forEach(function (val, slideNum) {
+    slidesDiv.insertAdjacentHTML('beforeend', '<div class="dot"></div>')
 })
 
 const goToSlide = function(slide) {
