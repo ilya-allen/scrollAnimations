@@ -25,9 +25,24 @@ slides.forEach(function(val, slideNum) {
     val.style.transform = `translateX(${100 * (slideNum)}%)`
 })
 
-slides.forEach(function (val, slideNum) {
-    slidesDiv.insertAdjacentHTML('beforeend', '<div class="dot"></div>')
-})
+function createDots() {
+    slides.forEach(function (val, slideNum) {
+        slidesDiv.insertAdjacentHTML('beforeend', `<div class="dot" data-slide=${slideNum}></div>`)
+    }) 
+    document.querySelector(`.dot[data-slide="${0}"]`).classList.add('active');
+}
+
+createDots();
+
+
+function activateDot(slide) {
+    document.querySelectorAll('.dot').forEach(function(val, slideNum) {
+        val.classList.remove('active')
+        console.log(val)
+    })
+
+    document.querySelector(`.dot[data-slide="${slide}"]`).classList.add('active');
+}
 
 const goToSlide = function(slide) {
     slides.forEach((s, i) => s.style.transform = `translateX(${100 * (i-slide)}%)`)
@@ -41,6 +56,7 @@ function nextSlide() {
     }
     curSlide++;
     goToSlide(curSlide)
+    activateDot(curSlide)
 }
 
 function prevSlide() {
@@ -49,6 +65,7 @@ function prevSlide() {
     }
     curSlide--;
     goToSlide(curSlide)
+    activateDot(curSlide)
 }
 
 
