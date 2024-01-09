@@ -80,3 +80,11 @@ document.addEventListener('keydown', function(e) {
 rightArrow.addEventListener('click', nextSlide)
 
 leftArrow.addEventListener('click', prevSlide)
+
+document.querySelectorAll('.dot').forEach(function(val, dotNum) {
+    val.addEventListener('click', function(e) { 
+        curSlide = val.dataset.slide
+        goToSlide(curSlide)
+        activateDot(curSlide)
+    })
+})
