@@ -80,7 +80,17 @@
 
 body {
     background-color: coral;
-    overflow: hidden;
+}
+
+.down_arrow {
+    position: absolute;
+    bottom: 50px;
+    right: -60px;
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid #00ff37;
+    border-right: 2px solid #00ff37;
+    transform: rotate(135deg);
 }
 
 .row {
@@ -130,4 +140,23 @@ h1 {
 
 .active {
     background-color: rgb(255, 255, 255); 
+}
+
+.law_img {
+    float: right;
+    height: 400px;
+    width: auto;
+}
+
+.text_wrap {
+    width: 500px;
+}
+
+.text_title {
+    text-align: left;
+    float: left;
+}
+
+.text_section {
+    height: 90vh;
 }

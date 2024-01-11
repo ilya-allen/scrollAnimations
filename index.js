@@ -9,13 +9,19 @@ const bodySection = document.querySelector('.body_section')
 const leftArrow = document.querySelector('.left_arrow');
 const rightArrow = document.querySelector('.right_arrow');
 const slidesDiv = document.querySelector('.slides_container')
+const downArrow = document.querySelector('.down_arrow');
+const textSection = document.querySelector('.text_section')
 let scrollVal = 0;
 
 downButton.addEventListener('click', function() {
-    bodySection.scrollIntoView();
+    window.scrollBy(0, (bodySection.getBoundingClientRect().top - 200))
     downButton.style.transform = 'translateX(-400%)'
     headerText.style.transform = 'translateX(-200%)'
     image.style.transform = 'translateX(200%)'
+})
+
+downArrow.addEventListener('click', function() {
+    window.scrollBy(0, (textSection.getBoundingClientRect().top - 200))
 })
 
 const slides = document.querySelectorAll('.image');
