@@ -80,6 +80,7 @@
 
 body {
     background-color: coral;
+    overflow: hidden;
 }
 
 .down_arrow {
@@ -146,17 +147,30 @@ h1 {
     float: right;
     height: 400px;
     width: auto;
+    transform: translateX(-400%);
+    transition: 800ms ease-in-out;
 }
 
 .text_wrap {
     width: 500px;
+    margin-left: 50px;
+    transform: translateX(200%);
+    transition: 800ms ease-in-out;
 }
 
 .text_title {
     text-align: left;
     float: left;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .text_section {
     height: 90vh;
+}
+
+.paragraph {
+    margin-top: 10px;
+    margin-left: 2px; 
+    font-family: Arial, Helvetica, sans-serif;
+
 }

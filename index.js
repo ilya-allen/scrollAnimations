@@ -11,6 +11,8 @@ const rightArrow = document.querySelector('.right_arrow');
 const slidesDiv = document.querySelector('.slides_container')
 const downArrow = document.querySelector('.down_arrow');
 const textSection = document.querySelector('.text_section')
+const lawImg = document.querySelector('.law_img');
+const textWrap = document.querySelector('.text_wrap')
 let scrollVal = 0;
 
 downButton.addEventListener('click', function() {
@@ -22,6 +24,9 @@ downButton.addEventListener('click', function() {
 
 downArrow.addEventListener('click', function() {
     window.scrollBy(0, (textSection.getBoundingClientRect().top - 200))
+    lawImg.style.transform = `translateX(${0}%)`
+    textWrap.style.transform = `translateX(${0}%)`
+
 })
 
 const slides = document.querySelectorAll('.image');
