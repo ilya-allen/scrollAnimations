@@ -13,6 +13,7 @@ const downArrow = document.querySelector('.down_arrow');
 const textSection = document.querySelector('.text_section')
 const lawImg = document.querySelector('.law_img');
 const textWrap = document.querySelector('.text_wrap')
+const sliderThumb = document.querySelector('.slider')
 let scrollVal = 0;
 
 downButton.addEventListener('click', function() {
@@ -98,4 +99,9 @@ document.querySelectorAll('.dot').forEach(function(val, dotNum) {
         goToSlide(curSlide)
         activateDot(curSlide)
     })
+})
+
+sliderThumb.addEventListener('input', function() {
+    lawImg.style.transform = `translateX(${sliderThumb.value * 10}%)`
+    lawImg.style.transition = '1ms ease-in-out'
 })
