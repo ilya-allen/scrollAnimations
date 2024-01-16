@@ -149,6 +149,7 @@ h1 {
     width: auto;
     /*transform: translateX(-400%);*/
     transition: 800ms ease-in-out;
+    position: static;
 }
 
 .text_wrap {
@@ -196,4 +197,16 @@ h1 {
     height: 25px;
     background-color: aqua;
     cursor: pointer;
+}
+
+.images_div {
+    overflow: visible;
+    width: 282px;
+    height: 400px;
+    float: right;
+}
+
+.img_div {
+    width: 50%;
+    float: right;
 }

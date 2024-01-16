@@ -11,7 +11,7 @@ const rightArrow = document.querySelector('.right_arrow');
 const slidesDiv = document.querySelector('.slides_container')
 const downArrow = document.querySelector('.down_arrow');
 const textSection = document.querySelector('.text_section')
-const lawImg = document.querySelector('.law_img');
+const lawImg = document.querySelectorAll('.law_img');
 const textWrap = document.querySelector('.text_wrap')
 const sliderThumb = document.querySelector('.slider')
 let scrollVal = 0;
@@ -102,6 +102,9 @@ document.querySelectorAll('.dot').forEach(function(val, dotNum) {
 })
 
 sliderThumb.addEventListener('input', function() {
-    lawImg.style.transform = `translateX(${sliderThumb.value * 10}%)`
-    lawImg.style.transition = '1ms ease-in-out'
+    lawImg.forEach(function(val, index) {
+        val.style.transform = `translateX(${sliderThumb.value * 10}%)`
+        val.style.transition = '1ms ease-in-out'
+    })
+
 })
