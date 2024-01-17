@@ -114,6 +114,7 @@ body {
 .col {
     float: left;
     width: 50%;
+    overflow: hidden;
 }
 
 h1 {
@@ -149,7 +150,8 @@ h1 {
     width: auto;
     /*transform: translateX(-400%);*/
     transition: 800ms ease-in-out;
-    position: static;
+    position: absolute;
+    right: 0;
 }
 
 .text_wrap {
@@ -209,4 +211,12 @@ h1 {
 .img_div {
     width: 50%;
     float: right;
+}
+
+.box {
+    width: 282px;
+    height: 500px;
+    float: right;
+    position: relative;
+    overflow: hidden;
 }
