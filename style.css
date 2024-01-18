@@ -220,3 +220,11 @@ h1 {
     position: relative;
     overflow: hidden;
 }
+
+.slider_text {
+    margin-left: 32.5%;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(58, 37, 37);
+    margin-bottom: 10px;
+    font-size: 20px;
+}

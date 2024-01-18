@@ -102,9 +102,23 @@ document.querySelectorAll('.dot').forEach(function(val, dotNum) {
 })
 
 sliderThumb.addEventListener('input', function() {
-    lawImg.forEach(function(val, index) {
-        val.style.transform = `translateX(${sliderThumb.value * 10}%)`
-        val.style.transition = '1ms ease-in-out'
-    })
+    if (sliderThumb.value < 90 || sliderThumb.value > 110) {
+        lawImg.forEach(function(val, index) {
+            val.style.transform = `translateX(${sliderThumb.value * 1}%)`
+            val.style.transition = '1ms ease-in-out'
+        })
+    } else if (sliderThumb.value > 180){
+        lawImg.forEach(function(val, index) {
+            val.style.transform = `translateX(${200}%)`
+            val.style.transition = '1ms ease-in-out'
+        })
+
+    } else {
+        lawImg.forEach(function(val, index) {
+            val.style.transform = `translateX(${100}%)`
+            val.style.transition = '1ms ease-in-out'
+        })
+    }
+
 
 })
