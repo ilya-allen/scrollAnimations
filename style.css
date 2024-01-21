@@ -80,7 +80,7 @@
 
 body {
     background-color: coral;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .down_arrow {
@@ -148,7 +148,6 @@ h1 {
     float: right;
     height: 400px;
     width: auto;
-    /*transform: translateX(-400%);*/
     transition: 800ms ease-in-out;
     position: absolute;
     right: 0;
@@ -157,7 +156,7 @@ h1 {
 .text_wrap {
     width: 500px;
     margin-left: 50px;
-    /*transform: translateX(200%);*/
+    transform: translateX(200%);
     transition: 800ms ease-in-out;
 }
 
@@ -172,9 +171,10 @@ h1 {
 }
 
 .paragraph {
-    margin-top: 10px;
-    margin-left: 2px; 
-    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 50px;
+    margin-left: 5px; 
+    font-family: 'Arimo';
+    font-weight: 300;
 
 }
 
@@ -219,6 +219,8 @@ h1 {
     float: right;
     position: relative;
     overflow: hidden;
+    transform: translateX(-400%);
+    transition: 800ms ease-in-out;
 }
 
 .slider_text {

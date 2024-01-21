@@ -14,6 +14,7 @@ const textSection = document.querySelector('.text_section')
 const lawImg = document.querySelectorAll('.law_img');
 const textWrap = document.querySelector('.text_wrap')
 const sliderThumb = document.querySelector('.slider')
+const box = document.querySelector('.box')
 let scrollVal = 0;
 
 downButton.addEventListener('click', function() {
@@ -25,7 +26,7 @@ downButton.addEventListener('click', function() {
 
 downArrow.addEventListener('click', function() {
     window.scrollBy(0, (textSection.getBoundingClientRect().top - 200))
-    lawImg.style.transform = `translateX(${0}%)`
+    box.style.transform = `translateX(${0}%)`
     textWrap.style.transform = `translateX(${0}%)`
 
 })
