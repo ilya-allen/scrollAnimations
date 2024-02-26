@@ -15,7 +15,17 @@ const lawImg = document.querySelectorAll('.law_img');
 const textWrap = document.querySelector('.text_wrap')
 const sliderThumb = document.querySelector('.slider')
 const box = document.querySelector('.box')
+const homeButton = document.querySelector('.home_button')
 let scrollVal = 0;
+
+homeButton.addEventListener('click', function() {
+    document.documentElement.scrollTop = 0;
+    downButton.style.transform = 'translateX(0%)'
+    headerText.style.transform = 'translateX(0%)'
+    image.style.transform = 'translateX(0%)'
+    box.style.transform = `translateX(${-400}%)`
+    textWrap.style.transform = `translateX(${200}%)`
+})
 
 downButton.addEventListener('click', function() {
     window.scrollBy(0, (bodySection.getBoundingClientRect().top - 200))

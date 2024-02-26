@@ -241,9 +241,13 @@ h1 {
 
 .home_button {
     font-family: 'Courier New', Courier, monospace;
+    color: rgb(206, 209, 36);
     font-weight: 600;
     width: 150px;
     height: 25px;
     margin-left: 5px;
-    margin-top: 10px;
+    margin-top: 5px;
+    background-color: #0e0847;
+    border: none;
+    padding: 7px;
 }
